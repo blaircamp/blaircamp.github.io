@@ -1,0 +1,29 @@
+{
+  "templates": "./templates",
+  "contents": "./contents",
+  "output": "./",
+
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "codecampbell",
+    "owner": "Blair Campbell",
+    "description": ""
+  },
+
+  "plugins": [
+    "wintersmith-nunjucks",
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}
