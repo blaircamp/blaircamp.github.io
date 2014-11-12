@@ -4,10 +4,10 @@
   "output": "./",
 
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://codecampbell.com",
     "name": "codecampbell",
     "owner": "Blair Campbell",
-    "description": ""
+    "description": "Computers and other stuff"
   },
 
   "plugins": [
