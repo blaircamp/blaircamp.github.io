@@ -7,13 +7,15 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-size: 21px;
   line-height: 1.52;
-  background-color: white;
+  background-color: grey;
   text-rendering: optimizeLegibility;
   font-weight: 300;
 }
 
 
 #content{
+  padding-top:0.5em;
+  padding-bottom:0.5em;
 	background: whitesmoke;
 }
 .content-wrap {
@@ -24,6 +26,10 @@ body {
 body, a {
   color: #171717;
 }
+.nav a {
+  color:whitesmoke;
+}
+
 
 a:hover {
   color: #ff8000;
@@ -89,7 +95,7 @@ hr {
 /* page header */
 
 .header {
-  margin: 3em 0 5em;
+  margin: 1.5em 0 1.5em;
 }
 
 .header h1 {
@@ -101,7 +107,11 @@ hr {
 
 .header a, .header a:hover {
   text-decoration: none;
-  color: #171717;
+  color: white;
+}
+
+.header .description{
+  color:white;
 }
 
 .header .author {
@@ -135,13 +145,13 @@ body.article-detail > header {
 /* page footer */
 
 footer {
-  margin: 3em 0;
+  margin: 1.5em 0;
 }
 
 footer .nav {
   text-align: center;
-  margin-top: 5em;
-  margin-bottom: 3.5em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 footer .nav a {
