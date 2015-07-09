@@ -12,7 +12,7 @@ I have recently started playing around with the 2D game framework [CocosSharp](h
 
 ### How to draw shapes in CocosSharp (How to use the CCDrawNode)
 
-The CCDrawNode is one of the ways you can draw things in CocosSharp.  You can check out the class documentation [here] (http://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
+The CCDrawNode is one of the ways you can draw things in CocosSharp.  You can check out the class documentation [here](http://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
 
 The function we are most interested in is this function 
 
