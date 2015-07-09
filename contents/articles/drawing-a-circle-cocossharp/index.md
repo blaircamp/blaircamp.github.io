@@ -1,5 +1,5 @@
 ---
-title: How to draw a circle in Cocossharp
+title: How to draw a circle in CocosSharp
 author: blair campbell
 date: 2015-07-09 20:00
 template: article.html
