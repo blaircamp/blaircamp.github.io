@@ -6,7 +6,7 @@ template: article.html
 ---
 
 
-I have recently started playing around with the 2D game framework [CocosSharp](https://github.com/mono/CocosSharp). The first thing I tried to do with CocosSharp was to draw a circle to the screen.  This article will show you howI ended up figuring it out.
+I have recently started playing around with the 2D game framework [CocosSharp](https://github.com/mono/CocosSharp). The first thing I tried to do with CocosSharp was to draw a circle to the screen.  This article will show you how I ended up figuring it out.
 
 <span class="more"></span>
 
