@@ -1,5 +1,5 @@
 ---
-title: Keyboard Input and Wall Collisions in CocosSharp
+title: Simple Keyboard Input in CocosSharp
 author: blair campbell
 date: 2015-07-23 21:30
 template: article.html
