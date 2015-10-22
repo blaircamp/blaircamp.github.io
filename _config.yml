@@ -1,13 +1,30 @@
-# Site settings
-title: codecampbell
-email: blaircampbell@gmail.com
-author: Blair Campbell
-description: "code and stuff"
-baseurl: ""
-url: "http://codecampbell.com"
-google_analytics: 
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-paginate: 3
+# Setup
+title:               codecampbell
+tagline:             code and stuff
+url:                 http://codecampbell.com
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Blair Campbell
+  url:               https://twitter.com
+  email:             blaircampbell@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
