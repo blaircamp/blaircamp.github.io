@@ -1,0 +1,13 @@
+# Site settings
+title: codecampbell
+email: blaircampbell@gmail.com
+author: Blair Campbell
+description: "code and stuff"
+baseurl: ""
+url: "http://codecampbell.com"
+google_analytics: 
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 3
