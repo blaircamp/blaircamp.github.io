@@ -3,7 +3,7 @@ published: true
 title: How to test for file locks on Windows in golang
 layout: post
 ---
-I needed a way to test if a file was still locked by another process.  I created the function below to do just that.  It uses the windows.Open function that eventually calls the win api function CreateFile.  I try to get the Read/Write, Create and Append permission for the file.  If another process is using that file it will fail and return an error, otherwise it will return a file handle that will be closed using windows.Close.
+I needed a way to test if a file was still locked by another process.  I ended up creating the function below.  It uses the windows.Open function that eventually calls the win api function CreateFile.  I try to get the Read/Write, Create and Append permission for the file.  If another process is using that file it will fail and return an error, otherwise it will return a file handle that will be closed using windows.Close.
 
 {% highlight go %}
 import "golang.org/x/sys/windows"
