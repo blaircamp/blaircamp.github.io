@@ -1,9 +1,10 @@
 ---
-published: false
+published: true
 title: How to test for file locks on Windows in golang
 layout: post
 ---
- import "golang.org/x/sys/windows"
+```go
+import "golang.org/x/sys/windows"
 
 func IsFileLocked(path string) bool { 
 	ret := false 
@@ -14,4 +15,5 @@ func IsFileLocked(path string) bool {
 	} 
 	windows.Close(f) 
 	return ret 
-} 
+}
+```
