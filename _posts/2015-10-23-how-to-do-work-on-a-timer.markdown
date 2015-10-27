@@ -2,6 +2,8 @@
 published: false
 title: How to do work on a timer in a windows service [golang]
 layout: post
+tags: [golang]
+categories: [golang]
 ---
 {% highlight go %}
 package main
