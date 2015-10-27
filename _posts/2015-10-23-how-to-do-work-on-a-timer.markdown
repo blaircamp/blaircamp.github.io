@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: How to do work on a timer in a windows service
 layout: post
 tags: 
@@ -8,6 +8,8 @@ categories:
   - golang
 ---
 
+
+I was build a windows service that needed to fire off a long processing function ever so often.  I couldn't use a Ticker since I wasn't sure when the long processing would finish.  This is an example of how I ended up using a Timer and reseting it after the long process had finished. Everytime a signal is received from the Timer, I make sure the timer is stopped, perform the long running task and then reset the Timer to fire again.
 
 {% highlight go %}
 package main
@@ -32,7 +34,7 @@ func(p *program) Stop(s service.Service) error{
 }
 
 func (p *program) run() error{
-  ticker := time.NewTimer( 60 * time.Second)
+  ticker := time.NewTimer( 5 * time.Second)
   for{
       case <-ticker.C:
           ticker.Stop()
