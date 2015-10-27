@@ -1,6 +1,6 @@
 ---
 published: false
-title: How to do work on a timer in a windows service [golang]
+title: How to do work on a timer in a windows service
 layout: post
 tags: [golang]
 categories: [golang]
