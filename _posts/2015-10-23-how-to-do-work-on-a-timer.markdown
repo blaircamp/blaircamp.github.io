@@ -9,7 +9,7 @@ categories:
 ---
 
 
-I was build a windows service that needed to fire off a long processing function ever so often.  I couldn't use a Ticker since I wasn't sure when the long processing would finish.  This is an example of how I ended up using a Timer and reseting it after the long process had finished. Everytime a signal is received from the Timer, I make sure the timer is stopped, perform the long running task and then reset the Timer to fire again.
+I was building a windows service that needed to fire off a long processing function every so often.  I couldn't use a Ticker since I wasn't sure when the long processing would finish.  This is an example of how I ended up using a Timer and reseting it after the long process had finished. Everytime a signal is received from the Timer, I make sure the timer is stopped, perform the long running task and then reset the Timer to fire again.
 
 {% highlight go %}
 package main
