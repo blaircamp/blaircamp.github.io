@@ -3,6 +3,7 @@ published: false
 title: How to do work on a timer in a windows service [golang]
 layout: post
 ---
+{% highlight go %}
 package main
 import "github.com/kardianos/service"
 import "time"
@@ -54,3 +55,5 @@ panic(err)
 }
 
 }
+
+{% endhighlight %}
