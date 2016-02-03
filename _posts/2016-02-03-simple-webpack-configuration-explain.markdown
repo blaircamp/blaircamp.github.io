@@ -7,9 +7,6 @@ categories: [webpack,javascript,reactjs]
 ---
 
 
-##Simple Webpack Configuration Explain
-
-
 {% highlight js %}
 
 alert('hello world');
