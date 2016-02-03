@@ -5,7 +5,3 @@ layout: post
 tags: [golang]
 categories: [golang]
 ---
-{% highlight go %}
-
-
-{% endhighlight %}

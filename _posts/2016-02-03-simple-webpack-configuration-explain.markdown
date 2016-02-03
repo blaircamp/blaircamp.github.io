@@ -7,10 +7,6 @@ categories: [webpack,javascript,reactjs]
 ---
 
 
-{% highlight js %}
-
+```js
 alert('hello world');
-
-{% endhighlight %}
-
-
+```

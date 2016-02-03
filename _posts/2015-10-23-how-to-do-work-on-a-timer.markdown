@@ -2,9 +2,9 @@
 published: true
 title: How to do work on a timer in a windows service
 layout: post
-tags: 
+tags:
   - golang
-categories: 
+categories:
   - golang
 ---
 
@@ -12,7 +12,7 @@ categories:
 
 I was building a windows service that needed to fire off a long running function every so often.  I couldn't use a Ticker since I wasn't sure when the function would return.  This is an example of how I ended up using a Timer to do this. Everytime a signal is received from the Timer, I make sure the timer is stopped, perform the long running task and then reset the Timer to fire again.
 
-{% highlight go %}
+```golang
 package main
 import "github.com/kardianos/service"
 import "time"
@@ -63,4 +63,4 @@ func main(){
       panic(err)
   }
 }
-{% endhighlight %}
+```
