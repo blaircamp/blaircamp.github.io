@@ -7,18 +7,11 @@ categories: [webpack,javascript,reactjs]
 ---
 
 I have been experimenting with reactjs the last couple of months and with that
-I started using [webpack](https://webpack.github.io/) to build the projects
-into a bundle.js.  I found the configuration for webpack a bit confusing so I
-am going to run through how I ended up configuring webpack.
+I started using [webpack](https://webpack.github.io/) to handle building the projects.  I found the configuration for webpack a bit confusing when I first started out so I want to document how my basic configuration is setup and why.
 
-A link to the full webpack configuration is I am using is [Here](https://raw.githubusercontent.com/blaircamp/react-webpack-project/master/webpack.config.js)
+A link to the full webpack configuration is I am using is [here](https://raw.githubusercontent.com/blaircamp/react-webpack-project/master/webpack.config.js)
 
-I have two webpack configurations because I wanted hot reloading to work with
-my style sheets. The difference is that the production one extracts the css
-into its own file for publishing and the other one does not.
-
-
-Entry points
+#### Entry points
 
 ```js
   entry: [
@@ -28,23 +21,51 @@ Entry points
   ]
 
 ```
+#### What is this?
 
-Output
+* First Entry
+```
+webpack-dev-server/client?http://0.0.0.0:8081 //WebpackDevServer host and port
+```
+
+
+* Second Entry
+```
+webpack/hot/only-dev-server //"only" prevents reload on syntax errors
+```
+
+* Third Entry
+```
+./index.jsx //App entry point
+```
+
+#### Output
 ```js
   output: {
           path: path.join(__dirname, 'public'),
           filename: 'bundle.js'
   }
 ```
+#### What is this?
+This tells webpack where to put the bundled JavaScript file it has created. The path setting points to the directory where it should be saved, and the filename is what it should be called
 
-Resolving Extensions
+
+#### Resolving Extensions
 ```js
   resolve: {
         extensions: ['', '.js', '.jsx','.css']
   },
 ```
+#### What is this?
+The resolve.extensions setting tells webpack what file extensions it should search for while resolving modules.  In the example below, if you want to import a local stylesheet for a reactjs component you will need to have the .css extension in the extension array.
 
-Modules
+```js
+  import style from './style'
+```
+
+
+
+#### Modules
 ```js
   module: {
       loaders: [
@@ -61,8 +82,11 @@ Modules
       ]
   }
 ```
+#### What is this?
+###### JSX loader
+###### CSS Loader
 
-Dev Server Configuration
+#### Dev Server Configuration
 ```js
   devServer: {
         contentBase: "./public",
@@ -71,12 +95,13 @@ Dev Server Configuration
         inline: true
   },
 ```
+#### What is this?
 
 Changes For production
 
 ExtractTextPlugin
 
-All Together Now
+#### All Together Now (Development)
 ```js
 var webpack = require('webpack');
 var path = require('path');
