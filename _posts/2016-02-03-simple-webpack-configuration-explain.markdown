@@ -13,7 +13,7 @@ A link to the full webpack configuration is I am using is [here](https://raw.git
 
 ### Entry points
 
-```js
+```javascript
   entry : [
     'webpack-dev-server/client?http://0.0.0.0:8081',
     'webpack/hot/only-dev-server',
@@ -48,7 +48,7 @@ This is the main entry point into the application, everything else is there to f
 
 
 ### Output
-```js
+```javascript
   output: {
           path: path.join(__dirname, 'public'),
           filename: 'bundle.js'
@@ -60,7 +60,7 @@ This tells webpack where to put the bundled JavaScript file it has created. The 
 
 
 ### Resolving Extensions
-```js
+```javascript
   resolve: {
         extensions: ['', '.js', '.jsx','.css']
   },
@@ -69,12 +69,12 @@ This tells webpack where to put the bundled JavaScript file it has created. The 
 #### What is this?
 The ** resolve.extensions ** setting tells webpack what file extensions it should search for while resolving modules.  In the example below, if you want to import a local stylesheet for a reactjs component you will need to have the .css extension in the extension array.
 
-```js
+```javascript
   import style from './style'
 ```
 
 ### Modules
-```js
+```javascript
   module: {
       loaders: [
           {
@@ -126,7 +126,7 @@ If you want to know more about loaders and their different configuration setting
 found [here](https://webpack.github.io/docs/loaders.html)
 
 ### Dev Server Configuration
-```js
+```javascript
   devServer: {
         contentBase: "./public",
         noInfo: true, //  --no-info option
@@ -154,7 +154,7 @@ webpack-dev-server --context-base './public ' --no-info  --inline
 More information on these swtiches and configuration can be found [here](https://webpack.github.io/docs/webpack-dev-server.html#webpack-dev-server-cli)
 
 ### All Together Now
-```js
+```javascript
 var webpack = require('webpack');
 var path = require('path');
 
