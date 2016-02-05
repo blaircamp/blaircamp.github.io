@@ -147,6 +147,7 @@ webpack bundle
 
 This configuration is the same as running this on the command line web starting
 the webpack-dev server.
+
 ```
 webpack-dev-server --context-base './public ' --no-info  --inline
 ```
