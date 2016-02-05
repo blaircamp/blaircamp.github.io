@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Simple Webpack Configuration Explained
 layout: post
 tags: [webpack,javascript,reactjs]
@@ -64,7 +64,7 @@ This tells webpack where to put the bundled JavaScript file it has created. The 
   },
 ```
 #### What is this?
-The resolve.extensions setting tells webpack what file extensions it should search for while resolving modules.  In the example below, if you want to import a local stylesheet for a reactjs component you will need to have the .css extension in the extension array.
+The ** resolve.extensions ** setting tells webpack what file extensions it should search for while resolving modules.  In the example below, if you want to import a local stylesheet for a reactjs component you will need to have the .css extension in the extension array.
 
 ```js
   import style from './style'
@@ -90,7 +90,38 @@ The resolve.extensions setting tells webpack what file extensions it should sear
   }
 ```
 #### What is this?
+This setting sets up the different tasks the webpack will perform on each file
+it finds.  
 
+The test setting is the condition that must be met before the loaders are applied to
+a particular file.  So for the first loader, the test is a regular expression
+to see if the filename ends with the jsx file extension.
+
+The exclude setting is like the test setting but it must return false, or must
+not be met.  We do not want to traverse any node_modules and bower_components
+so if the filename contains either of these names we don't process it.
+
+In the first setting (jsx) we use the loaders setting.  This is an array of the
+loaders we want to use to process a file. Each file that means the jsx test
+condition will be processed through the react-hot loader and the passed onto
+the babel loader. The react-hot loader is used to detect when a change can be
+accomplished with a hot-reload vs a full page refresh done by the webpack-dev-server.
+The babel loader is used to translate ES6 syntax into the ES5 syntax that browsers
+can use now.
+
+In the second setting (css) we use the loader setting which specifies loaders
+in a ()!) delimited string.  Using the (!) delimited syntax for the loader
+setting, any file meeting the test condition will be passed first to the
+style loader and then onto the css-loader.  The combination of the style-loader
+and css-loader is to make it possible to embed stylesheets into your webpack
+JavaScript bundle.  This allows you to modularize your stylesheets for your
+application instead of having single stylesheet. On the css-loader we pass in
+the query parameter 'modules'.  This is a setting telling the css-loader to use
+the module mode.  You can read more on those [here](https://github.com/css-modules/css-modules).
+
+
+If you want to know more about loaders and their different configuration settings more information can be
+found [here](https://webpack.github.io/docs/loaders.html)
 
 ### Dev Server Configuration
 ```js
