@@ -2,8 +2,6 @@
 published: true
 title: Simple Webpack Configuration Explained
 layout: post
-tags: [webpack,javascript,reactjs]
-categories: [webpack,javascript,reactjs]
 ---
 
 I have been experimenting with reactjs the last couple of months and with that
