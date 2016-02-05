@@ -21,6 +21,7 @@ A link to the full webpack configuration is I am using is [here](https://raw.git
   ]
 
 ```
+
 ### What is this?
 
 * First Entry
@@ -53,6 +54,7 @@ This is the main entry point into the application, everything else is there to f
           filename: 'bundle.js'
   }
 ```
+
 ### What is this?
 This tells webpack where to put the bundled JavaScript file it has created. The path setting points to the directory where it should be saved, and the filename is what it should be called
 
@@ -63,6 +65,7 @@ This tells webpack where to put the bundled JavaScript file it has created. The 
         extensions: ['', '.js', '.jsx','.css']
   },
 ```
+
 ### What is this?
 The ** resolve.extensions ** setting tells webpack what file extensions it should search for while resolving modules.  In the example below, if you want to import a local stylesheet for a reactjs component you will need to have the .css extension in the extension array.
 
@@ -87,6 +90,7 @@ The ** resolve.extensions ** setting tells webpack what file extensions it shoul
       ]
   }
 ```
+
 ### What is this?
 This setting sets up the different tasks the webpack will perform on each file
 it finds.  
@@ -129,6 +133,7 @@ found [here](https://webpack.github.io/docs/loaders.html)
         inline: true
   },
 ```
+
 ### What is this?
 This setting is used to configure the webpack-dev server that the configuration
 is passed into.
