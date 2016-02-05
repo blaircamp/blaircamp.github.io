@@ -2,10 +2,6 @@
 published: true
 title: How to do work on a timer in a windows service
 layout: post
-tags:
-  - golang
-categories:
-  - golang
 ---
 
 
